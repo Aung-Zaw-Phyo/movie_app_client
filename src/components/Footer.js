@@ -7,7 +7,7 @@ import app_store from '../images/app_store.jpg'
 
 const Footer = () => {
     return (
-        <div className="bg-[#191919]">
+        <div className="bg-[#191919] mt-auto">
             <div className="container py-8">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
                     <div>

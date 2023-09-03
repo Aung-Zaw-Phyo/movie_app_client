@@ -5,11 +5,11 @@ import Header from "../components/Header";
 
 const RootLayout = () => {
     return (
-        <>
+        <div className="flex flex-col min-h-[100vh]">
             <Header/>
             <Outlet/>
             <Footer/>
-        </>
+        </div>
     );
 };
 

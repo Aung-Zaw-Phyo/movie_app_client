@@ -8,6 +8,7 @@ import Upcoming, {loader as upcomingLoader} from "./pages/Movie/Upcoming";
 import TopRated, {loader as topRatedLoader} from "./pages/Movie/TopRated";
 import Series, {loader as seriesLoader} from "./pages/Series";
 import Pricing from "./pages/Pricing";
+import Detail, {loader as detailLoader} from "./pages/Detail";
 
 const router = createBrowserRouter([
     {
@@ -23,6 +24,11 @@ const router = createBrowserRouter([
             {
                 path: 'movie',
                 children: [
+                    {
+                        path: 'detail/:id',
+                        element: <Detail/>,
+                        loader: detailLoader
+                    },
                     {
                         path: 'popular',
                         element: <Popular/>,
