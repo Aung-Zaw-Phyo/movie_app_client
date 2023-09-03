@@ -7,7 +7,7 @@ const Movie = (props) => {
     const movie = props.data.data
     return (
         <>
-            <div className='w-full relative' >
+            <div className='w-full relative min-h-[60vh]' >
                 <img src={movie.cover} className="h-[80vh] lg:h-auto bg-cover bg-center object-cover" alt="" />
                 <div className="absolute top-0 bottom-0 right-0 left-0 flex flex-col justify-center items-center bg-[#1919196d] p-4">
                     <h1 className="text-[30px] font-bold text-center">{movie.title}</h1>
