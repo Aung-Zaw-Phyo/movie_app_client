@@ -2,7 +2,6 @@ import React, { Suspense } from "react";
 import { Await, defer, json, useFetcher, useLoaderData } from "react-router-dom";
 import ComponentLoading from "../../components/UI/ComponentLoading";
 import ComponentError from "../../components/UI/ComponentError";
-import Header from "../../components/Header";
 import rated_img from './../../images/rated.jpg'
 import Movies from "../../components/UI/Movies";
 
@@ -12,7 +11,6 @@ const TopRated = () => {
     const resolveData = fetcher.data && fetcher.data.movies ? fetcher.data.movies : loadedData.movies
     return (
         <>
-            <Header/>
             <div className="w-full"> 
                 <img src={rated_img} className="w-full h-full bg-cover bg-center" alt="" />
             </div>

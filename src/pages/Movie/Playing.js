@@ -2,7 +2,6 @@ import React, { Suspense } from "react";
 import { Await, defer, json, useFetcher, useLoaderData } from "react-router-dom";
 import ComponentLoading from "../../components/UI/ComponentLoading";
 import ComponentError from "../../components/UI/ComponentError";
-import Header from "../../components/Header";
 import playing_img from './../../images/playing.jpg'
 import Movies from "../../components/UI/Movies";
 
@@ -13,7 +12,6 @@ const Playing = () => {
     const resolveData = fetcher.data && fetcher.data.movies ? fetcher.data.movies : loadedData.movies
     return (
         <>
-            <Header/>
             <div className="w-full"> 
                 <img src={playing_img} className="w-full h-full bg-cover bg-center" alt="movie cover" />
             </div>

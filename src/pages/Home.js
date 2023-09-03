@@ -1,19 +1,16 @@
 import React, { Suspense } from "react";
 import hero from './../images/hero2.jpg'
 import series_img from './../images/series_img.webp'
-import { Await, defer, json, useLoaderData, Link, useRouteLoaderData } from "react-router-dom";
+import { Await, defer, json, Link, useRouteLoaderData } from "react-router-dom";
 import MovieSlider from '../components/home/MovieSlider'
 import ComponentLoading from "../components/UI/ComponentLoading";
 import ComponentError from "../components/UI/ComponentError";
-import Header from '../components/Header'
 
 
 const Home = () => {
     const loadedData = useRouteLoaderData('root')
     return (
         <>
-            <Header/>
-
             <div className="w-full"> 
                 <img src={hero} className="w-full h-full bg-cover bg-center" alt="" />
             </div>

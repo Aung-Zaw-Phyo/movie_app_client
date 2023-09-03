@@ -3,7 +3,6 @@ import { Await, defer, json, useFetcher, useLoaderData } from "react-router-dom"
 import series_img from './../images/series.jpg'
 import ComponentLoading from "../components/UI/ComponentLoading";
 import ComponentError from "../components/UI/ComponentError";
-import Header from "../components/Header";
 import Movies from "../components/UI/Movies";
 
 
@@ -13,7 +12,6 @@ const Series = () => {
     const resolveData = fetcher.data && fetcher.data.movies ? fetcher.data.movies : loadedData.movies
     return (
         <>
-            <Header/>
             <div className="w-full"> 
                 <img src={series_img} className="w-full h-full bg-cover bg-center" alt="" />
             </div>

@@ -3,7 +3,6 @@ import { Await, defer, json, useFetcher, useLoaderData } from "react-router-dom"
 import popular_img from './../../images/popular.jpg'
 import ComponentLoading from "../../components/UI/ComponentLoading";
 import ComponentError from "../../components/UI/ComponentError";
-import Header from "../../components/Header";
 import Movies from "../../components/UI/Movies";
 
 
@@ -14,7 +13,6 @@ const Popular = () => {
     const resolveData = fetcher.data && fetcher.data.movies ? fetcher.data.movies : loadedData.movies
     return (
         <>
-            <Header/>
             <div className="w-full"> 
                 <img src={popular_img} className="w-full h-full bg-cover bg-center" alt="" />
             </div>

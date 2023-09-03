@@ -7,6 +7,7 @@ import Playing, {loader as playingLoader} from "./pages/Movie/Playing";
 import Upcoming, {loader as upcomingLoader} from "./pages/Movie/Upcoming";
 import TopRated, {loader as topRatedLoader} from "./pages/Movie/TopRated";
 import Series, {loader as seriesLoader} from "./pages/Series";
+import Pricing from "./pages/Pricing";
 
 const router = createBrowserRouter([
     {
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
                 path: 'series',
                 element: <Series/>,
                 loader: seriesLoader
+            },
+            {
+                path: 'pricing',
+                element: <Pricing/>
             }
         ]
     }

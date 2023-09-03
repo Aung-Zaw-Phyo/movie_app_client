@@ -84,7 +84,7 @@ const Header = () => {
                                 </ul>
                             </li>
                             <li className="mx-2"><Link to='/series'>Series</Link></li>
-                            <li className="mx-2"><Link>Pricing</Link></li>
+                            <li className="mx-2"><Link to='/pricing'>Pricing</Link></li>
                         </ul>
                     </div>
 

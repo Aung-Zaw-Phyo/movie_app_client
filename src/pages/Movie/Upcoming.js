@@ -3,7 +3,6 @@ import { Await, defer, json, useFetcher, useLoaderData } from "react-router-dom"
 import coming_img from './../../images/coming.jpg'
 import ComponentLoading from "../../components/UI/ComponentLoading";
 import ComponentError from "../../components/UI/ComponentError";
-import Header from "../../components/Header";
 import Movies from "../../components/UI/Movies";
 
 const Upcoming = () => {
@@ -12,7 +11,6 @@ const Upcoming = () => {
     const resolveData = fetcher.data && fetcher.data.movies ? fetcher.data.movies : loadedData.movies
     return (
         <>
-            <Header/>
             <div className="w-full"> 
                 <img src={coming_img} className="w-full h-full bg-cover bg-center" alt="" />
             </div>
