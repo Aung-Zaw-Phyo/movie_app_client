@@ -4,8 +4,8 @@ import pricing_img from '../images/pricing.jpg'
 const Pricing = () => {
     return (
         <>
-            <div className="w-full h-[60vh] relative"> 
-                <img src={pricing_img} className="w-full h-full bg-cover bg-fixed bg-center" alt="" />
+            <div className="w-full relative"> 
+                <img src={pricing_img} className="h-[80vh] w-full bg-cover bg-top object-cover" alt="" />
                 <div className="absolute top-0 bottom-0 right-0 left-0 flex justify-center items-center bg-[#1919196d]">
                     <h1 className="text-[30px] font-bold">Pricing Plan</h1>
                 </div>

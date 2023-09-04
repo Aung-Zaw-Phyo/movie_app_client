@@ -13,7 +13,7 @@ const Playing = () => {
     return (
         <>
             <div className="w-full"> 
-                <img src={playing_img} className="w-full h-full bg-cover bg-center" alt="movie cover" />
+                <img src={playing_img} className="min-h-[80vh] lg:h-auto bg-cover bg-top object-cover" alt="movie cover" />
             </div>
             <div className="container py-10">
                 <Suspense fallback={<ComponentLoading/>}>

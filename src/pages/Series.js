@@ -13,7 +13,7 @@ const Series = () => {
     return (
         <>
             <div className="w-full"> 
-                <img src={series_img} className="w-full h-full bg-cover bg-center" alt="" />
+                <img src={series_img} className="min-h-[80vh] lg:h-auto bg-cover bg-top object-cover" alt="" />
             </div>
             <div className="container py-10">
                 <Suspense fallback={<ComponentLoading/>}>
@@ -32,6 +32,7 @@ export default Series;
 const movieLoader = async (request) => {
     let url = process.env.REACT_APP_API_URL + '/series'
     const paginateLink = request.url.split('link=')[1]
+    console.log(paginateLink)
     if (paginateLink) {
         url = paginateLink
     }

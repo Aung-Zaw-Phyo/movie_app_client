@@ -12,7 +12,7 @@ const TopRated = () => {
     return (
         <>
             <div className="w-full"> 
-                <img src={rated_img} className="w-full h-full bg-cover bg-center" alt="" />
+                <img src={rated_img} className="min-h-[80vh] lg:h-auto bg-cover bg-top object-cover" alt="" />
             </div>
             <div className="container py-10">
                 <Suspense fallback={<ComponentLoading/>}>

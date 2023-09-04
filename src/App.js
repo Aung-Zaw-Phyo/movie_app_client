@@ -8,13 +8,16 @@ import Upcoming, {loader as upcomingLoader} from "./pages/Movie/Upcoming";
 import TopRated, {loader as topRatedLoader} from "./pages/Movie/TopRated";
 import Series, {loader as seriesLoader} from "./pages/Series";
 import Pricing from "./pages/Pricing";
-import Detail, {loader as detailLoader} from "./pages/Detail";
+import MovieDetail, {loader as movieDetailLoader} from "./pages/MovieDetail";
+import SeriesDetail, {loader as seriesDetailLoader} from "./pages/SeriesDetail";
+import Error from "./pages/Error";
 
 const router = createBrowserRouter([
     {
         path: '',
         element: <RootLayout/>,
         id: 'root',
+        errorElement: <Error/>,
         loader: homeLoader,
         children: [
             {
@@ -26,8 +29,8 @@ const router = createBrowserRouter([
                 children: [
                     {
                         path: 'detail/:id',
-                        element: <Detail/>,
-                        loader: detailLoader
+                        element: <MovieDetail/>,
+                        loader: movieDetailLoader
                     },
                     {
                         path: 'popular',
@@ -53,8 +56,18 @@ const router = createBrowserRouter([
             },
             {
                 path: 'series',
-                element: <Series/>,
-                loader: seriesLoader
+                children: [
+                    {
+                        index: true,
+                        element: <Series/>,
+                        loader: seriesLoader
+                    }, 
+                    {
+                        path: 'detail/:id',
+                        element: <SeriesDetail/>,
+                        loader: seriesDetailLoader
+                    }
+                ]
             },
             {
                 path: 'pricing',
