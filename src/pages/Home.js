@@ -11,8 +11,17 @@ const Home = () => {
     const loadedData = useRouteLoaderData('root')
     return (
         <>
-            <div className="w-full"> 
+            <div className="w-full relative"> 
                 <img src={hero} className="min-h-[80vh] lg:h-auto bg-cover bg-top object-cover" alt="" />
+                <div className="absolute top-0 bottom-0 right-0 left-0  p-4 bg-gradient-to-r from-[#0c171fb9] from-0% via-[#0c171fcd] via-100% py-6">
+                    <div className="container flex flex-col justify-center items-start h-full">
+                        <h1 className="text-[28px] font-bold text-center mb-4">The Flash</h1>
+                        <p className="mb-5">Action Adventure Science Fiction | 2h 24m</p>
+                        <Link to='/movie/detail/298618'>
+                            <button className="mb-3">Watch Now</button>
+                        </Link>
+                    </div>
+                </div>
             </div>
 
             <div className="container py-10">

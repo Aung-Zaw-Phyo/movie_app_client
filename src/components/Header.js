@@ -72,7 +72,7 @@ const Header = () => {
                         <ul className="flex">
                             <li className="mx-2"><Link to='/'>Home</Link></li>
                             <li className="mx-2 relative group">
-                                Movies
+                                <span className="cursor-pointer">Movies</span>
                                 <ul className="
                                     absolute top-[100%] rounded min-w-[250%] max-w-[320%]  p-2 px-3
                                     hidden group-hover:block bg-white
